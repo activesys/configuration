@@ -1,0 +1,149 @@
+a.vim
+    A few of quick commands to swtich between source files and header files quickly.
+
+    :A switches to the header file corresponding to the current file being edited (or vise versa)
+    :AS splits and switches
+    :AV vertical splits and switches
+    :AT new tab and switches
+    :AN cycles through matches
+    :IH switches to file under cursor
+    :IHS splits and switches
+    :IHV vertical splits and switches
+    :IHT new tab and switches
+    :IHN cycles through matches
+    <Leader>ih switches to file under cursor
+    <Leader>is switches to the alternate file of file under cursor (e.g. on  <foo.h> switches to foo.cpp)
+    <Leader>ihn cycles through matches
+
+comments.vim
+    bal Plugin to comment and un-comment lines in different source files in both normal and visual <Shift-V> mode
+
+    ctrl-c to comment a single line
+    ctrl-x to un-comment a single line
+    shift-v and select multiple lines, then ctrl-c to comment the selected multiple lines
+    shift-v and select multiple lines, then ctrl-x to un-comment the selected multiple lines
+    supports: c, c++, java, php[23], proc, css, html, htm, xml, xhtml, vim, vimrc, sql, sh, ksh, csh, perl and normal files
+
+crefvim.vim
+    The intention of this project is to provide a C-reference manual that can
+    be viewed with Vim and accessed from within Vim. 
+
+      <Leader>cr normal mode:  get help for word under cursor
+			       Memory aid cr: (c)-(r)eference
+      <Leader>cr visual mode:  get help for visually selected text
+			       Memory aid cr: (c)-(r)eference
+      <Leader>cw:              prompt for word CRefVim should search for
+			       Memory aid cw: (c)-reference (w)hat
+      <Leader>cc:              jump to table of contents of the C-reference manual
+			       Memory aid cc: (c)-reference (c)ontents
+
+grep.vim
+    The grep.vim plugin introduces the following Vim commands:
+
+    :Grep          - Search for the specified pattern in the specified files
+    :GrepAdd       - Same as ":Grep" but adds the results to the current results
+    :Rgrep         - Run recursive grep
+    :RgrepAdd      - Same as ":Rgrep" but adds the results to the current results
+    :GrepBuffer    - Search for a pattern on all open buffers
+    :GrepBufferAdd - Same as ":GrepBuffer" but adds the results to the current
+		     results
+    :Bgrep         - Same as :GrepBuffer
+    :BgrepAdd      - Same as :GrepBufferAdd
+    :GrepArgs      - Search for a pattern on all the Vim argument
+		     filenames (:args)
+    :GrepArgsAdd   - Same as ":GrepArgs" but adds the results to the current
+		     results
+    :Fgrep         - Run fgrep
+    :FgrepAdd      - Same as ":Fgrep" but adds the results to the current
+		     results
+    :Rfgrep        - Run recursive fgrep
+    :RfgrepAdd     - Same as ":Rfgrep" but adds the results to the current
+		     results
+    :Egrep         - Run egrep
+    :EgrepAdd      - Same as ":Egrep" but adds the results to the current
+		     results
+    :Regrep        - Run recursive egrep
+    :RegrepAdd     - Same as ":Regrep" but adds the results to the current
+		     results
+    :Agrep         - Run agrep
+    :AgrepAdd      - Same as ":Agrep" but adds the results to the current
+		     results
+    :Ragrep        - Run recursive agrep
+    :RagrepAdd     - Same as ":Ragrep" but adds the results to the current
+		     results
+
+    The above commands can be invoked like this:
+
+   :Grep   [<grep_options>] [<search_pattern> [<file_name(s)>]]
+   :Rgrep  [<grep_options>] [<search_pattern> [<file_name(s)>]]
+   :Fgrep  [<grep_options>] [<search_pattern> [<file_name(s)>]]
+   :Rfgrep [<grep_options>] [<search_pattern> [<file_name(s)>]]
+   :Egrep  [<grep_options>] [<search_pattern> [<file_name(s)>]]
+   :Regrep [<grep_options>] [<search_pattern> [<file_name(s)>]]
+   :Agrep  [<grep_options>] [<search_pattern> [<file_name(s)>]]
+   :Ragrep [<grep_options>] [<search_pattern> [<file_name(s)>]]
+
+   :GrepAdd   [<grep_options>] [<search_pattern> [<file_name(s)>]]
+   :RgrepAdd  [<grep_options>] [<search_pattern> [<file_name(s)>]]
+   :FgrepAdd  [<grep_options>] [<search_pattern> [<file_name(s)>]]
+   :RfgrepAdd [<grep_options>] [<search_pattern> [<file_name(s)>]]
+   :EgrepAdd  [<grep_options>] [<search_pattern> [<file_name(s)>]]
+   :RegrepAdd [<grep_options>] [<search_pattern> [<file_name(s)>]]
+   :AgrepAdd  [<grep_options>] [<search_pattern> [<file_name(s)>]]
+   :RagrepAdd [<grep_options>] [<search_pattern> [<file_name(s)>]]
+
+   :GrepBuffer [<grep_options>] [<search_pattern>]
+   :Bgrep [<grep_options>] [<search_pattern>]
+   :GrepArgs [<grep_options>] [<search_pattern>]
+
+   :GrepBufferAdd [<grep_options>] [<search_pattern>]
+   :BgrepAdd [<grep_options>] [<search_pattern>]
+   :GrepArgsAdd [<grep_options>] [<search_pattern>] 
+
+highlight_current_line.vim
+
+minibufexpl.vim
+    <Tab> next buffer
+    <Shift-Tab> previous buffer
+
+bufexplorer.vim
+    To start exploring in the current window, use: >
+     \be   or   :BufExplorer
+    To start exploring in a newly split horizontal window, use: >
+     \bs   or   :BufExplorerHorizontalSplit
+    To start exploring in a newly split vertical window, use: >
+     \bv   or   :BufExplorerVerticalSplit
+
+stlrefvim.vim
+    For example, in the expression:
+    std::for_each(start, end, PrintFunc)
+    place the cursor over for_each and type <Leader>tr to go to documentation for this function.  Type <Leader>te to go 
+    to an example that uses this function.
+
+templatefile.vim
+    skel.* for some type file.
+
+taglist.vim
+    You can now use the ":TlistToggle" command to open/close the taglist
+    window. You can use the ":help taglist" command to get more information
+    about using the taglist plugin. 
+
+<F2> - switch between vim windows quickly.
+<F3> - show file explorer.
+<F4> - show tag list.
+<F5> - grep.
+<F6> - standard c function reference.
+<F7> - c++ stl reference.
+<F8> - auto complaction.
+<F9> - make c and c++ tags.
+\aa - switch .h and .c quickly.
+\hx - hex show.
+\tx - unhex show.
+\ww - save.
+\qq - quit not save.
+\qa - quit all not save.
+\xx - save and quit.
+\xa - save and quit all.
+
+game:
+:Matrix

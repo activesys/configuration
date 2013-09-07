@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/wb/Programs/python/a_b/c_d/abc.py'
+let g:netrw_dirhist_2='/home/wb/Public'
+let g:netrw_dirhist_3='/home/wb/Projects'
+let g:netrw_dirhist_4='/home/wb'
+let g:netrw_dirhist_5='/usr/include/c++/4.4.4'
+let g:netrw_dirhist_6='/home/wb/.vim'

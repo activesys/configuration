@@ -1,0 +1,83 @@
+" My vim profile
+:set number
+:set nocp
+:filetype indent on
+:set shiftwidth=4
+:set softtabstop=4
+:set formatoptions=roctq
+:set nohlsearch
+:set showmatch
+:set matchtime=3
+
+:au FileType c,cpp setl expandtab
+
+" set omni complete menu
+:set completeopt=longest,menu
+:highlight Pmenu ctermbg=White ctermfg=Blue
+:highlight PmenuSel ctermbg=Blue ctermfg=White
+:highlight PmenuSbar ctermbg=Yellow ctermfg=Red
+:highlight PmenuThumb ctermbg=Yellow ctermfg=Red
+
+let &errorformat="%f:%l:%c: %t%*[^:]:%m,%f:%l: %t%*[^:]:%m," .&errorformat
+
+set tags+=/usr/include
+" <F2> - quickly for switch vim window
+:imap <F2> <Esc><C-W><C-W>
+:nmap <F2> <C-W><C-W>
+" <F4> - file explorer
+"taglist
+let Tlist_Show_One_File=1
+let Tlist_Exit_OnlyWindow=1
+"WinManager
+let g:winManagerWindowLayout='FileExplorer'
+nmap <F4> :WMToggle<CR>
+imap <F4> :WMToggle<CR>
+" <F3> - tag list
+:imap <F3> <Esc>:TlistToggle<CR>
+:nmap <F3> :TlistToggle<CR>
+" <F7> - Grep
+:imap <F7> <Esc>:Grep<CR>
+:nmap <F7> :Grep<CR>
+" <F6> - standard c library function reference
+:imap <F6> <Esc>\cr
+:nmap <F6> \cr
+" <F5> - bufexplorer
+:imap <F5> <Esc>\be
+:nmap <F5> \be
+" <F8> - make
+:imap <F8> <Esc>:w<CR>:make<CR>
+:nmap <F8> :w<CR>:make<CR>
+" <F9> - ctags
+:imap <F9> <Esc>:w<CR>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR>
+:nmap <F9> :w<CR>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR>
+
+" \aa - quickly for switch .h and .c
+:noremap <silent> <Leader>aa <Esc>:A<CR>
+:vnoremap <silent> <Leader>aa <Esc>:A<CR>
+:imap <silent> <Leader>aa <Esc>:A<CR>
+" \hx \tx- for hex view
+:noremap <silent> <Leader>hx <Esc>:%!xxd<CR>
+:vnoremap <silent> <Leader>hx <Esc>:%!xxd<CR>
+:imap <silent> <Leader>hx <Esc>:%!xxd<CR>
+:noremap <silent> <Leader>tx <Esc>:%!xxd -r<CR>uu
+:vnoremap <silent> <Leader>tx <Esc>:%!xxd -r<CR>uu
+:imap <silent> <Leader>tx <Esc>:%!xxd -r<CR>uu
+
+" \ww - save
+:noremap <silent> <Leader>ww <Esc>:w<CR>
+:vnoremap <silent> <Leader>ww <Esc>:w<CR>
+:imap <silent> <Leader>ww <Esc>:w<CR>
+" \qq \qa - quit no save
+:noremap <silent> <Leader>qq <Esc>:q!<CR>
+:vnoremap <silent> <Leader>qq <Esc>:q!<CR>
+:imap <silent> <Leader>qq <Esc>:q!<CR>
+:noremap <silent> <Leader>qa <Esc>:qa!<CR>
+:vnoremap <silent> <Leader>qa <Esc>:qa!<CR>
+:imap <silent> <Leader>qa <Esc>:qa!<CR>
+" \xx \xa - save and quit
+:noremap <silent> <Leader>xx <Esc>:x<CR>
+:vnoremap <silent> <Leader>xx <Esc>:x<CR>
+:imap <silent> <Leader>xx <Esc>:x<CR>
+:noremap <silent> <Leader>xa <Esc>:xa<CR>
+:vnoremap <silent> <Leader>xa <Esc>:xa<CR>
+:imap <silent> <Leader>xa <Esc>:xa<CR>
