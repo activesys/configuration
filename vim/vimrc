@@ -8,8 +8,9 @@
 :set nohlsearch
 :set showmatch
 :set matchtime=3
+:set textwidth=120
 
-:au FileType c,cpp setl expandtab
+:au FileType c,cpp,s setl expandtab
 
 " set omni complete menu
 :set completeopt=longest,menu
