@@ -1,7 +1,12 @@
 " My vim profile
 :set number
+:set ruler
 :set nocp
+:filetype on
 :filetype indent on
+:set autoindent
+:set smartindent
+:set tabstop=4
 :set shiftwidth=4
 :set softtabstop=4
 :set formatoptions=roctq
@@ -10,7 +15,9 @@
 :set matchtime=3
 :set textwidth=120
 
-:au FileType c,cpp,s setl expandtab
+":au FileType c,cpp,s setl expandtab
+:autocmd FileType * set expandtab
+:autocmd FileType make set noexpandtab
 
 " set omni complete menu
 :set completeopt=longest,menu
