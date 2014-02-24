@@ -15,8 +15,11 @@
 :set matchtime=3
 :set textwidth=120
 
+syntax on
+
 ":au FileType c,cpp,s setl expandtab
 :autocmd FileType * set expandtab
+:autocmd FileType ruby set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 :autocmd FileType make set noexpandtab
 
 " set omni complete menu
